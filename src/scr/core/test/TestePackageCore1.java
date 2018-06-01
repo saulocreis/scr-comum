@@ -4,11 +4,14 @@ import java.io.PrintStream;
 import java.util.Enumeration;
 import java.util.Properties;
 
-public class TestePackageCore001 {
+
+public class TestePackageCore1 {
 	
 	static public final PrintStream ps = System.out;
 
 	static public void main(String[] args) {
+		
+		
 		
 		Properties props = System.getProperties();
 		

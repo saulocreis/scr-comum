@@ -1,4 +1,4 @@
-package scr.core;
+package scrtc.core;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -8,8 +8,8 @@ import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 
 public class CoreProperties {
-	static private final String DEFAULT_WORKSPACE = "injoy.";
-	static private final String DEFAULT_FILENAME = "propriedades.properties";
+	static public final String DEFAULT_WORKSPACE = "scrtc";
+	static public final String DEFAULT_FILENAME = "propriedades.properties";
 	
 	static private Properties properties = new Properties();
 	static private boolean initialized = false;
@@ -19,12 +19,12 @@ public class CoreProperties {
 	}
 	
 	static public String get(String property) {
-		property = Preconditions.checkNotNull(property, "O parâmetro deste método está vazio.");
+		property = Preconditions.checkNotNull(property, "The parameter is null.");
 		if(!initialized) {
 			initialize();
-			Preconditions.checkState(initialized, "CoreProperties não foi inicializada.");
+			Preconditions.checkState(initialized, "CoreProperties was not initialized.");
 		}
-		Optional<String> propertyValue = Optional.fromNullable(properties.getProperty(DEFAULT_WORKSPACE.concat(property)));
+		Optional<String> propertyValue = Optional.fromNullable(properties.getProperty(DEFAULT_WORKSPACE.concat(".").concat(property)));
 		return propertyValue.or("");
 	}
 	

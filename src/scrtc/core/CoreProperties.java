@@ -9,7 +9,7 @@ import com.google.common.base.Preconditions;
 
 public class CoreProperties {
 	static public final String DEFAULT_WORKSPACE = "scrtc";
-	static public final String DEFAULT_FILENAME = "propriedades.properties";
+	static public final String DEFAULT_FILENAME = DEFAULT_WORKSPACE.concat(".properties");
 	
 	static private Properties properties = new Properties();
 	static private boolean initialized = false;

@@ -14,10 +14,6 @@ public class CoreProperties {
 	static private Properties properties = new Properties();
 	static private boolean initialized = false;
 	
-	static public boolean isSet(String property) {
-		return get(property) != null;
-	}
-	
 	static public String get(String property) {
 		property = Preconditions.checkNotNull(property, "The parameter is null.");
 		if(!initialized) {
@@ -37,12 +33,10 @@ public class CoreProperties {
 			fis.close();
 		}
 		catch (FileNotFoundException e) {
-			properties = null;
 			initialized = false;
 			e.printStackTrace();
 		}
 		catch (IOException e) {
-			properties = null;
 			initialized = false;
 			e.printStackTrace();
 		}

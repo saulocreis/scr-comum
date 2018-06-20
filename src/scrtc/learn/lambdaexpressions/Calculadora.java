@@ -3,7 +3,7 @@ package scrtc.learn.lambdaexpressions;
 import java.util.function.BinaryOperator;
 
 /**
- * ver https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html
+ * https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html
  */
 public class Calculadora {
 

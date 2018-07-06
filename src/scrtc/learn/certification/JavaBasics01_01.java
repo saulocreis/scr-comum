@@ -9,6 +9,9 @@ public class JavaBasics01_01 {
 	
 		UmaInterface.metodoEstatico();
 		
+		UmaInterface u = () -> System.out.println("u -> metodoImplementado");
+		u.metodoImplementado();
+		
 		UmaInterface obj = new UmaClasse();
 		obj.metodoPadrao();
 		obj.metodoImplementado();		
